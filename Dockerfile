@@ -8,4 +8,4 @@ RUN npm install
 # RUN npx knex seed:run
 RUN yarn global add nodemon
 EXPOSE 8080
-CMD [ "nodemon", "index.js" ]
+CMD [ "npm", "start" ]

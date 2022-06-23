@@ -4,7 +4,10 @@ const app = express();
 app.use(express.json());
 
 
-app.get('/', (req, res) => res.status(200).send('Hello World!'))
+app.get('/', (req, res) => {
+  res.status(200).send('Hello World!')
+  console.log('send hello world')
+})
 
 
 app.get("/movies", async (req, res) => {
