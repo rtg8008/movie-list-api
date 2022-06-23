@@ -30,7 +30,7 @@ app.get("/movies", async (req, res) => {
 })
 
 app.post("/movies", async (req, res) => {
-  console.log('post request with data: ', req.body)
+  console.log('post request with data 1: ', req.body)
 
   if(req.body.title === undefined || req.body.iswatched === undefined)
   {
