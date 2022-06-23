@@ -5,14 +5,27 @@
  */
 module.exports = {
 
+  // development: {
+  //   client: 'postgresql',
+  //   connection: {
+  //     host: 'DATABASE',
+  //     password: 'docker',
+  //     user: 'postgres', //default postgres user
+  //     port: 5432,
+  //     database: 'movie_database' // expected database name to be created
+  //   },
+  //   migrations: {
+  //     directory: "./migrations",
+  //   },
+  //   seeds: {
+  //     directory: "./seeds",
+  //   },
+  // },
   development: {
-    client: 'postgresql',
+    client: "pg",
     connection: {
-      host: 'DATABASE',
-      password: 'docker',
-      user: 'postgres', //default postgres user
-      port: 5432,
-      database: 'movie_database' // expected database name to be created
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
     },
     migrations: {
       directory: "./migrations",
@@ -21,7 +34,6 @@ module.exports = {
       directory: "./seeds",
     },
   },
-
   staging: {
     client: 'postgresql',
     connection: {
