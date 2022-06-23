@@ -4,6 +4,7 @@ setup:
       as: DATABASE
   config:
     S3_BUCKET: my-example-bucket
+    PORT: 3000
 build:
   docker:
     web: Dockerfile
