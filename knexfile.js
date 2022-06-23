@@ -13,7 +13,13 @@ module.exports = {
       user: 'postgres', //default postgres user
       port: 5432,
       database: 'movie_database' // expected database name to be created
-    }
+    },
+    migrations: {
+      directory: "./migrations",
+    },
+    seeds: {
+      directory: "./seeds",
+    },
   },
 
   staging: {
