@@ -6,10 +6,10 @@ exports.seed = async function(knex) {
   // Deletes ALL existing entries
   await knex('movies').del()
   await knex('movies').insert([
-    {title: 'Mean Girls', isWatched: false},
-    {title: 'Hackers', isWatched: false},
-    {title: 'The Grey', isWatched: false},
-    {title: 'Sunshine', isWatched: true},
-    {title: 'Ex Machina', isWatched: false},
+    {title: 'Mean Girls', iswatched: false},
+    {title: 'Hackers', iswatched: false},
+    {title: 'The Grey', iswatched: false},
+    {title: 'Sunshine', iswatched: true},
+    {title: 'Ex Machina', iswatched: false},
   ]);
 };
